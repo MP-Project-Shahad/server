@@ -20,10 +20,10 @@
 
 ## BackEnd ER Diagram
 
-![Back ERD drawio](https://user-images.githubusercontent.com/92247858/146246278-37e03d69-94bc-4fa1-9d36-92c65152a8f9.png)
+![Back ERD drawio](https://user-images.githubusercontent.com/92247858/146669110-cf166504-aa1c-4d26-bffd-32a0980e4249.png)
 
 
 ## BackEnd UML Diagram
 
-![Untitled Diagram drawio (7)](https://user-images.githubusercontent.com/92247858/146258713-e805d778-9efd-429d-9a55-b5f6975502c3.png)
+![Untitled Diagram drawio (7)](https://user-images.githubusercontent.com/92247858/146669111-da74a64d-1bfa-441a-bd5e-d30afc9dc250.png)
 
