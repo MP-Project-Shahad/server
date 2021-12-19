@@ -136,11 +136,16 @@
 
 
 ### Commentcs Schema
--  **desc **: { type: String, required: true },
--  **timeStamp **: { type: Date },
--  **isDel **: { type: Boolean, default: false },
--  **userId **: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
--  **postId **: { type: mongoose.Schema.Types.ObjectId, ref: "Post" },
+| key | type       | requirment | default value   | 
+| ---- |---------- | ----------- | -------------- |
+| desc  | String    |  true    |        n/a    |
+| img   |  String  | true     | n/a         |
+| timeStamp  |  Date  | true     | n/a         |
+| isDel   |  Boolean  | true     | false        |
+| userId   |  mongoose.Schema.Types.ObjectId  | true     | ref: "User"        |
+| postId   |  mongoose.Schema.Types.ObjectId  | true     | ref: "Post"        |
+| id   |  objectId  | true     | n/a         |
+
  
 
 
