@@ -32,12 +32,12 @@
 | ----------- | ----------------- | ----------- | --------------------------------- |
 | POST        | /signUp    | Public      | Create new user                 |
 | POST         | /login | Public      | Login to user account                  |
-| GET         | /getUserById/:\id     | Private `Authentication`     | To get userPage by user Id |
+| GET         | /getUserById/:id     | Private `Authentication`     | To get userPage by user Id |
 | GET         | /allUsers  | Private `Authentication & Authorization`     | Get all users for admin                     |
-| PUT         | /delUser/:\id     | Private `Authentication`| Delete user by id                     |
-| PUT         | /editUser/:\id" | Private `Authentication`| Editing user info By Id       |
+| PUT         | /delUser/:id      | Private `Authentication`| Delete user by id                     |
+| PUT         | /editUser/:id " | Private `Authentication`| Editing user info By Id       |
 | POST         | /forgotPass"     | Public      | To send a forgot password message to the use email |
-| POST         | /resetPass/:\id     | Private      | User will get the link on email so that he can reset his password |
+| POST         | /resetPass/:id      | Private      | User will get the link on email so that he can reset his password |
 
 
 ### Lessons Routes
@@ -46,28 +46,28 @@
 | HTTP METHOD | URL               | Permissions | Behavior                          |
 | ----------- | ----------------- | ----------- | --------------------------------- |
 | POST        | /addLesson    | Private `Authentication & Authorization`| Create new lesson.       |
-| PUT         | /delLesson/:\id |  Private `Authentication & Authorization`| Deleting a lesson by id. |
-| PUT         | /editLesson/:\id | Private `Authentication & Authorization` | Editing a lesson by id. |
+| PUT         | /delLesson/:id  |  Private `Authentication & Authorization`| Deleting a lesson by id. |
+| PUT         | /editLesson/:id  | Private `Authentication & Authorization` | Editing a lesson by id. |
 | GET        | /allLessons    |  Private `Authentication & Authorization`      | Getting all the lessons on Lessons page.|
-| GET        | /getLesson/:id\    | Private `Authentication & Authorization`      | Getting lesson information on the selected lesson page.            |
+| GET        | /getLesson/:id     | Private `Authentication & Authorization`      | Getting lesson information on the selected lesson page.            |
 
 
 ### Posts Routes
 | HTTP METHOD | URL               | Permissions | Behavior                          |
 | ----------- | ----------------- | ----------- | --------------------------------- |
 | POST        | /addPost    | Private `Authentication`| Create new Post.       |
-| PUT         | /delPost/:\id |  Private `Authentication `| Deleting a post by id. |
-| PUT         | /editPost/:\id | Private `Authentication` | Editing a post by id. |
+| PUT         | /delPost/:id  |  Private `Authentication `| Deleting a post by id. |
+| PUT         | /editPost/:id  | Private `Authentication` | Editing a post by id. |
 | GET        | /allPosts    |  Private `Authentication`      | Getting all the Posts on discussion page.|
 
 
 ### Comments Routes
 | HTTP METHOD | URL               | Permissions | Behavior                          |
 | ----------- | ----------------- | ----------- | --------------------------------- |
-| POST        | /addComment/:\id    | Private `Authentication`| Add a comment on a post.       |
-| PUT         | /delComt/:\id |  Private `Authentication `| Deleting a comment by id. |
-| PUT         | /editComt/:\id | Private `Authentication` | Editing a comment by id. |
-| GET        | /fullPost/:\id    |  Private `Authentication`      | Getting Post & the comments on it.|
+| POST        | /addComment/:id     | Private `Authentication`| Add a comment on a post.       |
+| PUT         | /delComt/:id  |  Private `Authentication `| Deleting a comment by id. |
+| PUT         | /editComt/:id  | Private `Authentication` | Editing a comment by id. |
+| GET        | /fullPost/:id     |  Private `Authentication`      | Getting Post & the comments on it.|
 
 
 ## BackEnd ER Diagram
