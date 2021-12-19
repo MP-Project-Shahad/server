@@ -87,18 +87,22 @@
 | role  | String    |  true    |        n/a    |
 | id   |  objectId  | true     | n/a         |
 
-- **role**: {type: String, required: true},
-- **_id**: auto generated
+
 
 ### User Schema 
-- **userName**: {type: String, required: true, unique: true},
-- **email**: {type: String, required: true, unique: true},
-- **password**: {type: String, required: true},
-- **avatar**: {type: String, default: "profilePhoto"},
-- **isActive**: {type: Boolean, default: false},
-- **isDeleted**: {type: Boolean, default: false},
-- **level**: {type: String, default: "didnt take placement test yet"},
-- **_id**: auto generated 
+| key | type       | requirment | default value   | 
+| ---- |---------- | ----------- | -------------- |
+| userName  | String    |  true    |        n/a    |
+| email   |  String  | true     | n/a         |
+| password   |  String  | true     | n/a         |
+| avatar   |  String  | false     | "profile photo"         |
+| isActive   |  Boolean  | true     | false        |
+| isDeleted   |  Boolean  | true     |false         |
+| level   |  String  | true     |"didnt take placement test yet"         |
+| id   |  objectId  | true     | n/a         |
+
+
+
 
 ### Lessons Schema 
 - **level**: {type: String, required: true},
