@@ -17,6 +17,22 @@
 
 - **Admins**: Admins can see all users and their learning progress, and can also delete or disable any user account. They can also reset a User leassons progress or move him to the next level. 
 
+## Project Trello Board
+
+[MP-Project-Shahad](https://trello.com/b/yYCqELgt/mp-project-shahad)
+
+## Project Slides
+
+[will be added soon!]
+
+## CLient Repo
+
+[Client repo](https://github.com/MP-Project-Shahad/client)
+
+## Server Deployment
+
+[will be added soon!]
+
 
 ## Routes
 
