@@ -79,6 +79,52 @@
 | GET        | /allContent    |  Private `Authentication & Authorization`        | Getting all the Content on Landing page.|
 
 
+## Modules
+
+### Roles Schema
+- **role**: {type: String, required: true},
+- **_id**: auto generated
+
+### User Schema 
+- **userName**: {type: String, required: true, unique: true},
+- **email**: {type: String, required: true, unique: true},
+- **password**: {type: String, required: true},
+- **avatar**: {type: String, default: "profilePhoto"},
+- **isActive**: {type: Boolean, default: false},
+- **isDeleted**: {type: Boolean, default: false},
+- **level**: {type: String, default: "didnt take placement test yet"},
+- **_id**: auto generated 
+
+### Lessons Schema 
+- **level**: {type: String, required: true},
+- **name**: {type: String, required: true},
+- **language**: {type: String, required: true},
+- **_id**: auto generated 
+
+### FrontPage content Schema
+- **desc**: {type: String, required: true},
+- **name**: {type:  String, required: true},
+- **img**: {type: String, required: true},
+- **link**: {type: String, required: true},
+- **price**: {type: String, required: true},
+- **_id**: auto generated 
+
+### Posts Schema
+-  **desc**: { type: String, required: true },
+-  **img**: { type: String },
+-  **timeStamp**: { type: Date },
+-  **isDel**: { type: Boolean, default: false },
+-  **userId**: { type: mongoose.Schema.Types.ObjectId, ref: "User" }, 
+-  **_id**: auto generated
+
+### Commentcs Schema
+-  **desc **: { type: String, required: true },
+-  **timeStamp **: { type: Date },
+-  **isDel **: { type: Boolean, default: false },
+-  **userId **: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+-  **postId **: { type: mongoose.Schema.Types.ObjectId, ref: "Post" },
+ 
+
 
 ## BackEnd ER Diagram
 
