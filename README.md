@@ -151,7 +151,7 @@
 
 ## BackEnd ER Diagram
 
-![Back ERD drawio](https://user-images.githubusercontent.com/92247858/146669110-cf166504-aa1c-4d26-bffd-32a0980e4249.png)
+![Back ERD drawio](https://user-images.githubusercontent.com/92247858/146675963-4586a59d-3003-4425-a064-8d6c918a3ee7.png)
 
 
 ## BackEnd UML Diagram
