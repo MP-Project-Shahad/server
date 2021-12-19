@@ -82,6 +82,11 @@
 ## Modules
 
 ### Roles Schema
+| key | type       | requirment | default value   |
+| ---- |---------- | ----------- | -------------- |
+| role  | String    |  true    |        n/a    |
+| id   |  objectId  | true     | n/a         |
+
 - **role**: {type: String, required: true},
 - **_id**: auto generated
 
