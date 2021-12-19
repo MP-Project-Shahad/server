@@ -42,13 +42,14 @@
 
 ### Lessons Routes
 - This router is only available for admins.
+
 | HTTP METHOD | URL               | Permissions | Behavior                          |
 | ----------- | ----------------- | ----------- | --------------------------------- |
-| POST        | /addLesson    | Private `Authentication & Authorization`| Create new lesson|
+| POST        | /addLesson    | Private `Authentication & Authorization`| Create new lesson.       |
 | PUT         | /delLesson/:\id |  Private `Authentication & Authorization`| Deleting a lessn by id. |
-| PUT    | /editLesson/:\id | Private `Authentication & Authorization` | Editing a lessn by id. |
+| PUT         | /editLesson/:\id | Private `Authentication & Authorization` | Editing a lessn by id. |
 | GET        | /allLessons    |  Private `Authentication & Authorization`      | Getting all the lessons on Lessons page.|
-| GET        | /getLesson/:id\    | Private `Authentication & Authorization`      | Getting lesson information on the selected lesson page            |
+| GET        | /getLesson/:id\    | Private `Authentication & Authorization`      | Getting lesson information on the selected lesson page.            |
 
 
 
