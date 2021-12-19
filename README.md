@@ -11,6 +11,8 @@
 
 - **User Page**: The system will immedietly navigate you to this page after logging in, here you can edit your personal information and add or remove you avater.
 
+- **Discussion Page**: Public discutions page is where users can communicate with each other and share posts and comment on other users posts.
+
 - **Learning Page**: When user opens this page for the first time he will get to choose his arabic knowledge level, and will be starting lessons according to that option. After each lesson the user will have a test of pronunciation and listening. Pronunciation tests will allow the user to record a voice immtating one on the database and our system will compare them and show if the user passed or not. While the Listening test will provide a voice record and the user will choose it's meaning from a given sentences options. Not passing means user can't go on with the lessons plan and will have to take this lesson again. 
 
 - **Admins**: Admins can see all users and their learning progress, and can also delete or disable any user account. They can also reset a User leassons progress or move him to the next level. 
