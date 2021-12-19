@@ -18,6 +18,23 @@
 - **Admins**: Admins can see all users and their learning progress, and can also delete or disable any user account. They can also reset a User leassons progress or move him to the next level. 
 
 
+## Routes
+
+### User Routes
+| HTTP METHOD | URL               | Permissions | Behavior                          |
+| ----------- | ----------------- | ----------- | --------------------------------- |
+| POST        | /signUp    | Public      | Create new user                 |
+| POST         | /login | Public      | Login to user account                  |
+| GET         | /getUserById/:\id     | Privet      | To get userPage by user Id |
+| GET         | /allUsers  | Privet      | Get all users for admin                     |
+| PUT         | /delUser/:\id     | Privet      | Delete user by id                     |
+| PUt         | /editUser/:\id"           | Private     | Editing user info By Id       |
+| POST         | /forgotPass"     | Public      | To send a forgot password message to the use email |
+| POST         | /resetPass/:\id     | Privet      | User will get the link on email so that he can reset his password |
+
+
+
+
 ## BackEnd ER Diagram
 
 ![Back ERD drawio](https://user-images.githubusercontent.com/92247858/146669110-cf166504-aa1c-4d26-bffd-32a0980e4249.png)
