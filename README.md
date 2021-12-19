@@ -46,12 +46,19 @@
 | HTTP METHOD | URL               | Permissions | Behavior                          |
 | ----------- | ----------------- | ----------- | --------------------------------- |
 | POST        | /addLesson    | Private `Authentication & Authorization`| Create new lesson.       |
-| PUT         | /delLesson/:\id |  Private `Authentication & Authorization`| Deleting a lessn by id. |
-| PUT         | /editLesson/:\id | Private `Authentication & Authorization` | Editing a lessn by id. |
+| PUT         | /delLesson/:\id |  Private `Authentication & Authorization`| Deleting a lesson by id. |
+| PUT         | /editLesson/:\id | Private `Authentication & Authorization` | Editing a lesson by id. |
 | GET        | /allLessons    |  Private `Authentication & Authorization`      | Getting all the lessons on Lessons page.|
 | GET        | /getLesson/:id\    | Private `Authentication & Authorization`      | Getting lesson information on the selected lesson page.            |
 
 
+### Posts Routes
+| HTTP METHOD | URL               | Permissions | Behavior                          |
+| ----------- | ----------------- | ----------- | --------------------------------- |
+| POST        | /addPost    | Private `Authentication`| Create new Post.       |
+| PUT         | /delPost/:\id |  Private `Authentication `| Deleting a post by id. |
+| PUT         | /editPost/:\id | Private `Authentication` | Editing a post by id. |
+| GET        | /allPosts    |  Private `Authentication`      | Getting all the Posts on discussion page.|
 
 
 
