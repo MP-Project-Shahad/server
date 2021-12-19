@@ -20,17 +20,26 @@
 
 ## Routes
 
-### User Routes
+### Roles Routes
+| HTTP METHOD | URL               | Permissions | Behavior                          |
+| ----------- | ----------------- | ----------- | --------------------------------- |
+| POST        | /postRole    | Privete `Authentication & Authorization`  | Create new Role                 |
+| GET         | /getRoles     | Private `Authentication & Authorization` | To get userPage by user Id |
+
+
+### Users Routes
 | HTTP METHOD | URL               | Permissions | Behavior                          |
 | ----------- | ----------------- | ----------- | --------------------------------- |
 | POST        | /signUp    | Public      | Create new user                 |
 | POST         | /login | Public      | Login to user account                  |
-| GET         | /getUserById/:\id     | Privet      | To get userPage by user Id |
-| GET         | /allUsers  | Privet      | Get all users for admin                     |
-| PUT         | /delUser/:\id     | Privet      | Delete user by id                     |
-| PUt         | /editUser/:\id"           | Private     | Editing user info By Id       |
+| GET         | /getUserById/:\id     | Private `Authentication`     | To get userPage by user Id |
+| GET         | /allUsers  | Private `Authentication & Authorization`     | Get all users for admin                     |
+| PUT         | /delUser/:\id     | Private `Authentication`| Delete user by id                     |
+| PUt         | /editUser/:\id" `Authentication`| Private     | Editing user info By Id       |
 | POST         | /forgotPass"     | Public      | To send a forgot password message to the use email |
-| POST         | /resetPass/:\id     | Privet      | User will get the link on email so that he can reset his password |
+| POST         | /resetPass/:\id     | Private      | User will get the link on email so that he can reset his password |
+
+
 
 
 
