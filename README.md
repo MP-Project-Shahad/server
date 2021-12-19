@@ -70,6 +70,16 @@
 | GET        | /fullPost/:id     |  Private `Authentication`      | Getting Post & the comments on it.|
 
 
+### FrontPage Content Routes
+| HTTP METHOD | URL               | Permissions | Behavior                          |
+| ----------- | ----------------- | ----------- | --------------------------------- |
+| POST        | /addContent    | Private `Authentication & Authorization`  | Adding to the Frontpage Content sections.       |
+| PUT         | /delContent/:id  |  Private `Authentication & Authorization`  | Deleting content by id. |
+| PUT         | /editContent/:id  |Private `Authentication & Authorization`   | Editing content by id. |
+| GET        | /allContent    |  Private `Authentication & Authorization`        | Getting all the Content on Landing page.|
+
+
+
 ## BackEnd ER Diagram
 
 ![Back ERD drawio](https://user-images.githubusercontent.com/92247858/146669110-cf166504-aa1c-4d26-bffd-32a0980e4249.png)
