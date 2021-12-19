@@ -105,10 +105,13 @@
 
 
 ### Lessons Schema 
-- **level**: {type: String, required: true},
-- **name**: {type: String, required: true},
-- **language**: {type: String, required: true},
-- **_id**: auto generated 
+| key | type       | requirment | default value   | 
+| ---- |---------- | ----------- | -------------- |
+| level  | String    |  true    |        n/a    |
+| name   |  String  | true     | n/a         |
+| language   |  String  | true     | n/a         |
+| id   |  objectId  | true     | n/a         |
+
 
 ### FrontPage content Schema
 - **desc**: {type: String, required: true},
