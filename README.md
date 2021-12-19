@@ -61,6 +61,14 @@
 | GET        | /allPosts    |  Private `Authentication`      | Getting all the Posts on discussion page.|
 
 
+### Comments Routes
+| HTTP METHOD | URL               | Permissions | Behavior                          |
+| ----------- | ----------------- | ----------- | --------------------------------- |
+| POST        | /addComment/:\id    | Private `Authentication`| Add a comment on a post.       |
+| PUT         | /delComt/:\id |  Private `Authentication `| Deleting a comment by id. |
+| PUT         | /editComt/:\id | Private `Authentication` | Editing a comment by id. |
+| GET        | /fullPost/:\id    |  Private `Authentication`      | Getting Post & the comments on it.|
+
 
 ## BackEnd ER Diagram
 
