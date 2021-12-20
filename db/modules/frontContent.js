@@ -6,6 +6,7 @@ const frontContent = new mongoose.Schema({
   img: { type: String, required: true },
   link: { type: String, required: true },
   price: { type: String, required: true },
+  isDel: { type: Boolean, default: false },
 });
 
 module.exports = mongoose.model("FrontContent", frontContent);
