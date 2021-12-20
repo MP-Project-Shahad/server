@@ -1,6 +1,6 @@
 const express = require("express");
 const userRouter = express.Router();
-const popuptools = require("popup-tools");
+// const popuptools = require("popup-tools");
 // require("./../middlewares/passport");
 // const authentication = require("./../middlewares/authentication");
 // const authorization = require("./../middlewares/authorization");
