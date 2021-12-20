@@ -29,15 +29,15 @@ const post = (req, res) => {
 //updating a post.
 const updatePost = (req, res) => {
   const { id } = req.params; //post id
-  const { desc } = req.body;
+  const { desc, img } = req.body;
   // console.log(req);
 
   postModel.findById({ _id: id }).then((item) => {
-    if (req.addedToken.id == item.userId) {
+    // if (req.addedToken.id == item.userId) {
       postModel
         .findOneAndUpdate(
           { _id: id },
-          { $set: { desc: desc, timeStamp: Date() } },
+          { $set: { desc: desc, timeStamp: Date(), img: img } },
           { new: true }
         )
         .then((result) => {
@@ -46,9 +46,9 @@ const updatePost = (req, res) => {
         .catch((err) => {
           res.send(err);
         });
-    } else {
-      res.status(400).send("forbidden attempt");
-    }
+    // } else {
+    //   res.status(400).send("forbidden attempt");
+    // }
   });
 };
 
@@ -57,10 +57,10 @@ const softDelPost = (req, res) => {
   const { id } = req.params; //post id
 
   postModel.findById({ _id: id }).then((result) => {
-    if (
-      result.userId == req.addedToken.id ||
-      req.addedToken.role == "61a73488b03855b1f60c356f"
-    ) {
+    // if (
+    //   result.userId == req.addedToken.id ||
+    //   req.addedToken.role == "61a73488b03855b1f60c356f"
+    // ) {
       if (result.isDel != true) {
         postModel
           .findByIdAndUpdate(
@@ -90,9 +90,9 @@ const softDelPost = (req, res) => {
             res.send(err);
           });
       }
-    } else {
-      res.status(400).send("forbidden attempt");
-    }
+    // } else {
+    //   res.status(400).send("forbidden attempt");
+    // }
   });
 };
 

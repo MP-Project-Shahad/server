@@ -9,16 +9,16 @@ const newComment = (req, res) => {
   const newComment = new commentModel({
     desc,
     img,
-    userId: userId,
-    postId: postId,
+    postId,
+    userId,
     timeStamp: Date(),
   });
 
   newComment
     .save()
     .then((result) => {
-      res.send(result);
-      console.log(result);
+      res.json(result);
+      // console.log(result);
     })
     .catch((err) => {
       res.send(err);
