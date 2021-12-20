@@ -20,6 +20,7 @@ const user = new mongoose.Schema({
   },
   confirmKey: { type: Number },
   isActive: { type: Boolean, default: false },
+  key: { type: Number },
   password: { type: String, required: true },
   resetCode: { type: Number, default: 0 },
   avatar: {
@@ -31,7 +32,7 @@ const user = new mongoose.Schema({
   role: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Role",
-    default: "61a73499b03855b1f60c3571",
+    default: "61c062171218a1d5bd184f9b",
   },
   level: { type: String, default: "didn't take the placement test yet" },
 });

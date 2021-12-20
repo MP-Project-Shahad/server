@@ -118,11 +118,7 @@ const confirmed = (req, res) => {
   const { id } = req.params;
 
   userModel
-    .findByIdAndUpdate(
-      { _id: id },
-      { $set: { confirmed: true } },
-      { new: true }
-    )
+    .findByIdAndUpdate({ _id: id }, { $set: { isActive: true } }, { new: true })
     .then((result) => {
       // console.log(result);
       res.status(200).json(result);
