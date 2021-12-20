@@ -264,7 +264,34 @@ const oneUser = (req, res) => {
   }
 };
 
-//edit user details left..... + dont foget to change the user schema role id 
+//edit user details ... + dont foget to change the user schema role id
+const editUser = (req, res) => {
+  const { id } = req.params;
+  const { newMail, newName, newPass, newAvatar } = req.body;
+
+  const hashNewPass = await bcrypt.hash(newPass, SALT);
+
+  try {
+    userModel
+      .findByIdAndUpdate(
+        { _id: id },
+        {
+          $set: {
+            email: newMail,
+            userName: newName,
+            password: hashNewPass,
+            avatar: newAvatar,
+          },
+        },
+        { new: true }
+      )
+      .then((result) => {
+        res.status(200).json(result);
+      });
+  } catch (error) {
+    res.status(404).json(error.message);
+  }
+};
 
 module.exports = {
   registration,
@@ -275,4 +302,5 @@ module.exports = {
   resetPass,
   forgotPass,
   oneUser,
+  editUser,
 };
