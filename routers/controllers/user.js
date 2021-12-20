@@ -1,4 +1,4 @@
-const userModel = require("./../../db/module/user");
+const userModel = require("./../../db/modules/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
@@ -265,9 +265,9 @@ const oneUser = (req, res) => {
 };
 
 //edit user details ... + dont foget to change the user schema role id
-const editUser = (req, res) => {
+const editUser = async (req, res) => {
   const { id } = req.params;
-  const { newMail, newName, newPass, newAvatar } = req.body;
+  const { newName, newPass, newAvatar } = req.body;
 
   const hashNewPass = await bcrypt.hash(newPass, SALT);
 
@@ -277,7 +277,6 @@ const editUser = (req, res) => {
         { _id: id },
         {
           $set: {
-            email: newMail,
             userName: newName,
             password: hashNewPass,
             avatar: newAvatar,
