@@ -5,6 +5,7 @@ const lesson = new mongoose.Schema({
   title: { type: String, required: true },
   language: { type: String, required: true },
   level: { type: String, required: true },
+  isDel: { type: Boolean, default: false },
 });
 
 module.exports = mongoose.model("Lesson", lesson);
