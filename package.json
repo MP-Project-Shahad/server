@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "- **Landing**: This page is the main page of the site. It'll have a navigation bar, header of the site logo and main design (arabic letters), mini store section where we'll show some products that supports the campaign (تحدث العربية) or just basicaly has to do with arabic. In the store section we won't be showing product that we sell ourselves clicking on the product will take you to the store that sells it and you can order it from there. Landing page will also have a podcast section for the campaign podcast (تحدث العربية). If the user is logged in the lessons proccess will be also shown the first thing on landing page with some optional quizes.This page will be Public but some features will only show for registred users",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MP-Project-Shahad/server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MP-Project-Shahad/server/issues"
+  },
+  "homepage": "https://github.com/MP-Project-Shahad/server#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "google-auth-library": "^7.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.2",
+    "nodemailer": "^6.7.2",
+    "passport": "^0.5.2",
+    "popup-tools": "^1.0.2"
+  }
+}
