@@ -18,7 +18,7 @@ const user = new mongoose.Schema({
       "Please fill a valid email address",
     ],
   },
-  key: { type: Number },
+  confirmKey: { type: Number },
   isActive: { type: Boolean, default: false },
   password: { type: String, required: true },
   resetCode: { type: Number, default: 0 },
