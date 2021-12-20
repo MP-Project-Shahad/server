@@ -1,5 +1,5 @@
-const postModel = require("./../../db/module/post");
-const commentModel = require("./../../db/module/comment");
+const postModel = require("./../../db/modules/post");
+const commentModel = require("./../../db/modules/comments");
 
 //posting a new post
 const post = (req, res) => {
@@ -119,9 +119,52 @@ const allPosts = (req, res) => {
   }
 };
 
+//user can delete any comment on his post
+const deletePostComment = (req, res) => {
+  const { postId, commentId } = req.params;
+
+  postModel
+    .findById({ _id: postId })
+    .then((postResult) => {
+      if (postResult.userId == req.addedToken.id) {
+        //يقارن اليوزر ايدي عند البوست باليوزر ايدي بالبايلود
+        // console.log(postResult.userId);
+        // console.log(req.addedToken.id);
+        // console.log("first If");
+        commentModel.findById({ _id: commentId }).then((comResult) => {
+          if (comResult) {
+            // console.log(postResult._id);
+            // console.log(comResult.postId);
+            // console.log("second If");
+            if (postResult._id.toString() == comResult.postId.toString()) {
+              //يقارن البوست ايدي بالبوست ايدي بالكومنت
+              console.log("you'r in!!");
+              commentModel
+                .findByIdAndDelete({ _id: commentId })
+                .then((result) => {
+                  console.log("last round");
+                  res.status(200).json(result.desc, " have been deleted");
+                });
+            } else {
+              res.status(400).send("you are not allowed to delete it :/");
+            }
+          } else {
+            res.status(400).send("comment not found");
+          }
+        });
+      } else {
+        res.status(400).send("you are not allowed to do that :/");
+      }
+    })
+    .catch((err) => {
+      res.status(404).json(err);
+    });
+};
+
 module.exports = {
   post,
   updatePost,
   softDelPost,
   allPosts,
+  deletePostComment,
 };
