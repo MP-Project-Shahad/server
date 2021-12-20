@@ -5,7 +5,7 @@ require("./db");
 const roleRouter = require("./routers/routes/role");
 const userRouter = require("./routers/routes/user");
 const postRouter = require("./routers/routes/post");
-const commentRouter = require("./routers/routes/post");
+const commentRouter = require("./routers/routes/comment");
 
 const app = express();
 app.use(express.json());
