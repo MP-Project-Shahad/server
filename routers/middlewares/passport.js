@@ -12,7 +12,7 @@ const SECRETKEY = process.env.SECRETKEY;
 passport.use(
   new GoogleStrategy(
     {
-      //this was on local host if it crashed put it back
+      //this is on local host atm change it when deployed
       callbackURL: process.env.AUTH_URL,
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
