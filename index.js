@@ -8,10 +8,23 @@ const postRouter = require("./routers/routes/post");
 const commentRouter = require("./routers/routes/comment");
 const lessonsRouter = require("./routers/routes/lesson");
 const contentRouter = require("./routers/routes/frontContent");
+const passport = require("passport");
+require("./routers/middlewares/passport");
+const session = require("express-session");
 
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use(
+  session({
+    secret: "secret",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(roleRouter);
 app.use(userRouter);
