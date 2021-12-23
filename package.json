@@ -31,6 +31,7 @@
     "mongoose": "^6.1.2",
     "nodemailer": "^6.7.2",
     "passport": "^0.5.2",
+    "passport-google-oauth20": "^2.0.0",
     "popup-tools": "^1.0.2"
   }
 }
