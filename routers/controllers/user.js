@@ -83,7 +83,7 @@ const login = (req, res) => {
           const token = jwt.sign(payload, secret);
 
           if (savedPassword) {
-            if (result.confirmed === true) {
+            if (result.isActive === true) {
               res.status(200).json({ result, token });
             } else {
               res.json("user not confirmed, please check your email");
@@ -191,7 +191,7 @@ const forgotPass = (req, res) => {
           from: EMAIL,
           to: result.email,
           subject: `hello ${result.userName}`,
-          text: `This is a message to confirm your identity please write this code: ${code} in this page: https://adoring-keller-e8c6ea.netlify.app/resetPass/${result._id} to reset your password. `,
+          text: `This is a message to confirm your identity so that you can reset your password. please write this code: ${code} in this page: http://localhost:3000/ResetPass/${result._id} . `,
         };
 
         mailTransporter.sendMail(mailDetails, (err, data) => {
