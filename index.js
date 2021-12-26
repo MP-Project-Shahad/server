@@ -8,6 +8,7 @@ const postRouter = require("./routers/routes/post");
 const commentRouter = require("./routers/routes/comment");
 const lessonsRouter = require("./routers/routes/lesson");
 const contentRouter = require("./routers/routes/frontContent");
+const quizRouter = require("./routers/routes/quiz");
 const passport = require("passport");
 require("./routers/middlewares/passport");
 const session = require("express-session");
@@ -32,6 +33,7 @@ app.use(postRouter);
 app.use(commentRouter);
 app.use(lessonsRouter);
 app.use(contentRouter);
+app.use(quizRouter);
 
 const PORT = process.env.PORT;
 
