@@ -8,8 +8,8 @@ const {
 } = require("./../controllers/frontContent");
 
 contentRouter.get("/allContent", allContent);
-contentRouter.get("/addContent", addContent);
-contentRouter.get("/editContent", editContent);
-contentRouter.get("/delContent", deleteContent);
+contentRouter.post("/addContent", addContent);
+contentRouter.put("/editContent", editContent);
+contentRouter.put("/delContent", deleteContent);
 
 module.exports = contentRouter;
