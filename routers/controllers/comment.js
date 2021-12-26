@@ -97,6 +97,7 @@ const getFullPost = (req, res) => {
           .populate("userId", "userName")
           .then((item) => {
             fullPost.push(item);
+            res.status(200).json(fullPost);
           });
       });
     // commentModel ---------> this will only get user info and the post but we need the post and comments and the likes
