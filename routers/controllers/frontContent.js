@@ -24,7 +24,7 @@ const allContent = (req, res) => {
 
 //add new content
 const addContent = (req, res) => {
-  const { name, desc, img, link, price } = res.body;
+  const { name, desc, img, link, price } = req.body;
 
   try {
     const newContent = new frontContentModel({
