@@ -263,9 +263,9 @@ const oneUser = (req, res) => {
 //edit user details ... + dont foget to change the user schema role id
 const editUser = async (req, res) => {
   const { id } = req.params;
-  const { newName, newPass, newAvatar } = req.body;
+  const { newName, newEmail } = req.body;
 
-  const hashNewPass = await bcrypt.hash(newPass, SALT);
+  // const hashNewPass = await bcrypt.hash(newPass, SALT);
 
   try {
     userModel
@@ -274,8 +274,9 @@ const editUser = async (req, res) => {
         {
           $set: {
             userName: newName,
-            password: hashNewPass,
-            avatar: newAvatar,
+            // password: hashNewPass,
+            email: newEmail,
+            // avatar: newAvatar,
           },
         },
         { new: true }

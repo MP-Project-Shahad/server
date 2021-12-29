@@ -9,9 +9,9 @@ const {
 } = require("./../controllers/lesson");
 
 lessonsRouter.post("/addlesson", addLesson);
-lessonsRouter.post("/addlesson", editLesson);
-lessonsRouter.post("/addlesson", deleteLesson);
-lessonsRouter.post("/addlesson", allLessons);
-lessonsRouter.post("/addlesson", oneLesson);
+lessonsRouter.post("/editlesson/:id", editLesson);
+lessonsRouter.post("/deletelesson/:id", deleteLesson);
+lessonsRouter.post("/alllessons", allLessons);
+lessonsRouter.post("/lesson/:id", oneLesson);
 
 module.exports = lessonsRouter;

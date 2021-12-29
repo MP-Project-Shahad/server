@@ -35,6 +35,7 @@ const user = new mongoose.Schema({
     default: "61c062171218a1d5bd184f9b",
   },
   level: { type: String, default: "didn't take the placement test yet" },
+  arLevel: { type: String, default: "لم يتمم اختبار المستوى بعد" },
 });
 
 module.exports = mongoose.model("User", user);
