@@ -2,9 +2,10 @@ const lessonModel = require("./../../db/modules/lessons");
 
 //get all lessons
 const allLessons = (req, res) => {
+  const { level } = req.params;
   try {
     lessonModel
-      .find({ isDel: false })
+      .find({ $and: [{ isDel: false }, { level: level }] })
       .then((result) => {
         if (result) {
           res.status(200).json(result);
@@ -31,7 +32,7 @@ const oneLesson = (req, res) => {
       _id: id,
     })
     .then((result) => {
-      if (result.isDel === false) {
+      if (result[0].isDel === false) {
         res.status(200).json(result);
         console.log(result);
       } else {
