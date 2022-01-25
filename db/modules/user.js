@@ -34,7 +34,7 @@ const user = new mongoose.Schema({
     ref: "Role",
     default: "61c062171218a1d5bd184f9b",
   },
-  level: { type: String, default: "didn't take the placement test yet" },
+  level: { type: String, default: "no placement test " },
   pass: { type: Number, default: 1 },
 });
 

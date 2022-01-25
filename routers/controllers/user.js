@@ -263,7 +263,7 @@ const oneUser = (req, res) => {
 //edit user details ... + dont foget to change the user schema role id
 const editUser = async (req, res) => {
   const { id } = req.params;
-  const { newName, newEmail } = req.body;
+  const { newName, newEmail, newAvatar } = req.body;
 
   // const hashNewPass = await bcrypt.hash(newPass, SALT);
 
@@ -276,7 +276,7 @@ const editUser = async (req, res) => {
             userName: newName,
             // password: hashNewPass,
             email: newEmail,
-            // avatar: newAvatar,
+            avatar: newAvatar,
           },
         },
         { new: true }

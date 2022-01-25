@@ -94,7 +94,7 @@ const getFullPost = (req, res) => {
         fullPost.push(result);
         commentModel
           .find({ postId: id })
-          .populate("userId", "userName")
+          .populate("userId")
           .then((item) => {
             fullPost.push(item);
             res.status(200).json(fullPost);
