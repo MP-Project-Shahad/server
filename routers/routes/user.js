@@ -30,9 +30,9 @@ userRouter.get(
     res.end(popuptools.popupResponse(req.user));
   }
 );
-userRouter.get("/users", getUsers);
-userRouter.get("/oneUser/:id", oneUser);
-userRouter.put("/delUser/:id", deleteUser);
+userRouter.get("/users", authentication, getUsers);
+userRouter.get("/oneUser/:id", authentication, oneUser);
+userRouter.put("/delUser/:id", authentication, deleteUser);
 userRouter.post("/resetPass/:id", resetPass);
 userRouter.post("/forgotPass", forgotPass);
 userRouter.post("/editUser/:id", authentication, editUser);
