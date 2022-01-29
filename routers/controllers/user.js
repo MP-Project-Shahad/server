@@ -111,7 +111,6 @@ const getUsers = (req, res) => {
       res.send(err);
     });
 };
-//----------------------------------------
 
 //set user as confirmed
 const confirmed = (req, res) => {
@@ -127,7 +126,6 @@ const confirmed = (req, res) => {
       res.status(404).send("error message:", err.message);
     });
 };
-//-----------------------------------------
 
 //soft deleting a user for admins. ps: toggle
 const deleteUser = (req, res) => {

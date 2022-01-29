@@ -1,5 +1,6 @@
 const roleModel = require("./../../db/modules/role");
 
+//creating a role
 const create = (req, res) => {
   const { role } = req.body;
 
@@ -17,6 +18,7 @@ const create = (req, res) => {
     });
 };
 
+//getting roles
 const getRoles = (req, res) => {
   roleModel
     .find({})

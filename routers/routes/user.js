@@ -3,7 +3,6 @@ const userRouter = express.Router();
 const popuptools = require("popup-tools");
 require("./../middlewares/passport");
 const authentication = require("./../middlewares/authentication");
-const authorization = require("./../middlewares/authorization");
 const {
   registration,
   login,
@@ -36,6 +35,6 @@ userRouter.get("/oneUser/:id", oneUser);
 userRouter.put("/delUser/:id", deleteUser);
 userRouter.post("/resetPass/:id", resetPass);
 userRouter.post("/forgotPass", forgotPass);
-userRouter.post("/editUser/:id", editUser);
+userRouter.post("/editUser/:id", authentication, editUser);
 
 module.exports = userRouter;

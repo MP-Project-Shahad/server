@@ -1,5 +1,6 @@
 const quizModel = require("./../../db/modules/quiz");
 
+//adding questions
 const addQ = (req, res) => {
   const { name, qText, answers } = req.body;
 
@@ -19,6 +20,7 @@ const addQ = (req, res) => {
     });
 };
 
+//getting questions
 const getQs = (req, res) => {
   const { name } = req.params;
   quizModel
