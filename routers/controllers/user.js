@@ -259,7 +259,7 @@ const oneUser = (req, res) => {
 };
 
 //edit user details ... + dont foget to change the user schema role id
-const editUser = async (req, res) => {
+const editUser = (req, res) => {
   const { id } = req.params;
   const { newName, newEmail, newAvatar } = req.body;
 
@@ -287,6 +287,22 @@ const editUser = async (req, res) => {
   }
 };
 
+//changing the level
+const newLevel = (req, res) => {
+  const { id } = req.params;
+  const { level } = req.body;
+
+  try {
+    userModel
+      .findByIdAndUpdate({ _id: id }, { $set: { level: level } }, { new: true })
+      .then((result) => {
+        res.status(200).json(result);
+      });
+  } catch (error) {
+    res.status(404).json(error.message);
+  }
+};
+
 module.exports = {
   registration,
   login,
@@ -297,4 +313,5 @@ module.exports = {
   forgotPass,
   oneUser,
   editUser,
+  newLevel,
 };

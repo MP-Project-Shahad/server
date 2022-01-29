@@ -13,6 +13,7 @@ const {
   forgotPass,
   oneUser,
   editUser,
+  newLevel,
 } = require("./../controllers/user");
 const passport = require("passport");
 
@@ -35,6 +36,7 @@ userRouter.get("/oneUser/:id", authentication, oneUser);
 userRouter.put("/delUser/:id", authentication, deleteUser);
 userRouter.post("/resetPass/:id", resetPass);
 userRouter.post("/forgotPass", forgotPass);
+userRouter.post("/newLevel/:id", newLevel);
 userRouter.post("/editUser/:id", authentication, editUser);
 
 module.exports = userRouter;
