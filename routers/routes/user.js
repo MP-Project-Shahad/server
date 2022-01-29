@@ -36,7 +36,7 @@ userRouter.get("/oneUser/:id", authentication, oneUser);
 userRouter.put("/delUser/:id", authentication, deleteUser);
 userRouter.post("/resetPass/:id", resetPass);
 userRouter.post("/forgotPass", forgotPass);
-userRouter.put("/newLevel/:id", authentication, newLevel);
+userRouter.post("/newLevel/:id/:level", newLevel);
 userRouter.post("/editUser/:id", authentication, editUser);
 
 module.exports = userRouter;

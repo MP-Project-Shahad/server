@@ -290,12 +290,13 @@ const editUser = (req, res) => {
 //changing the level
 const newLevel = (req, res) => {
   const { id } = req.params;
-  const { level } = req.body;
+  const { level } = req.params;
 
   try {
     userModel
       .findByIdAndUpdate({ _id: id }, { $set: { level: level } }, { new: true })
       .then((result) => {
+        console.log(level);
         res.status(200).json(result);
       });
   } catch (error) {
