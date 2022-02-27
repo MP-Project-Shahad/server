@@ -32,7 +32,7 @@ userRouter.get(
   }
 );
 userRouter.get("/users", getUsers);
-userRouter.get("/oneUser/:id", authentication, oneUser);
+userRouter.get("/oneUser/:id", oneUser);
 userRouter.put("/delUser/:id", authentication, deleteUser);
 userRouter.post("/resetPass/:id", resetPass);
 userRouter.post("/forgotPass", forgotPass);
